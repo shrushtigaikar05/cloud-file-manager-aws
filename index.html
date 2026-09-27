@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cloud File Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>☁️ Cloud File Manager</h1>
+            <p>Secure Cloud File Management and Sharing System</p>
+        </header>
+
+        <!-- User Section -->
+        <section class="user-section">
+            <h2>Welcome, User</h2>
+            <button onclick="logout()">Logout</button>
+        </section>
+
+        <!-- Upload Section -->
+        <section class="card">
+            <h2>Upload File</h2>
+
+            <input type="file" id="fileInput">
+
+            <button onclick="uploadFile()">
+                Upload File
+            </button>
+
+            <p id="uploadStatus"></p>
+        </section>
+
+        <!-- File List -->
+        <section class="card">
+
+            <div class="file-header">
+                <h2>My Files</h2>
+
+                <button onclick="loadFiles()">
+                    🔄 Refresh
+                </button>
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>File Name</th>
+                        <th>Size</th>
+                        <th>Last Modified</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="fileList">
+
+                    <tr>
+                        <td colspan="4">
+                            No files loaded
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
